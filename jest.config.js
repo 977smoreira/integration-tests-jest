@@ -1,9 +1,8 @@
-import mongo from "@shelf/jest-mongodb/jest-preset.js";
 import { defaults } from "jest-config";
 import { recursive } from "merge";
 import ts from "ts-jest";
 
-export default recursive(ts, mongo, {
+export default recursive(ts, {
   testTimeout: 30000,
   testEnvironment: "node",
   transform: {
