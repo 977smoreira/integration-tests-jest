@@ -8,5 +8,7 @@ export default recursive(ts, mongo, {
   transform: {
     "^.+\\.ts?$": "ts-jest",
   },
-  reporters: ["default", "github-actions"],
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
+  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts"],
+  roots: ["<rootDir>/src"],
 });
