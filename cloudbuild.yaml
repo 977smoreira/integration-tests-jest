@@ -1,7 +1,7 @@
 steps:
   # set registry
   - id: set-registry
-    name: node:14-alpine
+    name: node:14-slim
     entrypoint: npm
     args: [
         "config",
@@ -10,17 +10,17 @@ steps:
       ] # set registry
     # set token
   - id: set-token
-    name: node:14-alpine
+    name: node:14-slim
     entrypoint: npm
     args: ["config", "set", "//npm.pkg.github.com/:_authToken=$_NPM_TOKEN"]
   # install dependencies
   - id: install-dependencies
-    name: node:14-alpine
+    name: node:14-slim
     entrypoint: npm
     args: ["install"]
   # run jest
   - id: run-jest
-    name: node:14-alpine
+    name: node:14-slim
     entrypoint: npm
     args: ["test"]
     env:
