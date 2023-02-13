@@ -1,4 +1,5 @@
 import mongo from "@shelf/jest-mongodb/jest-preset.js";
+import { defaults } from "jest-config";
 import { recursive } from "merge";
 import ts from "ts-jest";
 
