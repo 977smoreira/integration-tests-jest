@@ -6,11 +6,11 @@ import { Collection, Db, MongoClient, WithId } from "mongodb";
 import { entityCaster } from "./fixtures/entityCaster";
 import profile from "./fixtures/profile.json";
 
-const CASTER_BASE_URL = "https://dev-api.sonova.xyz/caster/v1/";
+const CASTER_BASE_URL = process.env.CASTER_BASE_URL || "";
 const DELAY_FOR_THE_SERVICES = 5000;
-const MONGODB_URI = "";
-const DE_MONGODB_ENTITY_DATABASE = "dev-de-caster";
-const DE_MONGODB_SYSTEM_DATABASE = "caster-test";
+const MONGODB_URI = process.env.MONGODB_URI || "";
+const DE_MONGODB_ENTITY_DATABASE = process.env.DE_MONGODB_ENTITY_DATABASE || "";
+const DE_MONGODB_SYSTEM_DATABASE = process.env.DE_MONGODB_SYSTEM_DATABASE || "";
 
 chai.use(chaiHttp);
 describe("Create a Profile for de", () => {
