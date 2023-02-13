@@ -18,10 +18,8 @@ steps:
     name: node:14-slim
     entrypoint: npm
     args: ["install"]
-    dir: "./tests/integration/"
   # run jest
   - id: run-jest
     name: node:14-slim
     entrypoint: npm
     args: ["run", "test"]
-    dir: "./tests/integration/"
