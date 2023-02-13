@@ -68,12 +68,9 @@ export const entityCaster = {
       wgClickId: "",
       whichInsuranceType: "STATUTORY",
     },
-    emailCheckResult: { valid: true },
   },
   id: expect.any(String),
   lastName: "sinayra",
-  phoneNumber: expect.any(String),
-  phoneNumbers: expect.any(Array),
   status: "UPDATED",
   systemProperties: {
     requestId: expect.any(String),
@@ -86,7 +83,5 @@ export const entityCaster = {
     emailTargetingAccepted: false,
     gender: "F",
     ipAddress: "1.1.1.1",
-    availabilityInfo: expect.any(Array),
-    isBlackListed: expect.any(Boolean),
   },
 };
